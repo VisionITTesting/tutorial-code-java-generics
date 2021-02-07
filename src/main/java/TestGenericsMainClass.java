@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /*
 This is how you made Employee class more flexible to take different types of data types.
@@ -12,9 +13,10 @@ public class TestGenericsMainClass {
 
     public static void main(String[] args){
 
+        //*******BELOW NOT ALLOWED BECAUSE WE HAVE CHANGED THE TYPE TO LIST ONLY IN EMPLOYEE CLASS
         //1. Create Employee object with only single role
-        Employee<String> empWithSingleRole = new Employee<String>(1,"Akash",36,"Admin");
-        empWithSingleRole.printEmployeeDetails();
+        //Employee<String> empWithSingleRole = new Employee<String>(1,"Akash",36,"Admin");
+        //empWithSingleRole.printEmployeeDetails();
 
         //2. Create a employee with multiple roles stored in array
         ArrayList<String> listRoles = new ArrayList<String>();
@@ -24,13 +26,22 @@ public class TestGenericsMainClass {
         Employee<ArrayList<String>> employeeWithMultipleRoleArrayList = new Employee<ArrayList<String>>(2,"Timothy",29,listRoles);
         employeeWithMultipleRoleArrayList.printEmployeeDetails();
 
+        //*******BELOW NOT ALLOWED BECAUSE WE HAVE CHANGED THE TYPE TO LIST ONLY IN EMPLOYEE CLASS
         //3. Create a employee with multiple roles stored in Hash Map
-        HashMap<String, String> hmRoles = new HashMap<String, String>();
-        hmRoles.put("Admin","Desc: CRUD ops");
-        hmRoles.put("Manager","Desc: Management of Teams");
-        hmRoles.put("HR","Desc: HR Ops");
-        Employee<HashMap<String,String>> employeeWithMultipleRoleHashMap = new Employee<HashMap<String,String>>(3,"SunShun",25,hmRoles);
-        employeeWithMultipleRoleHashMap.printEmployeeDetails();
+        //HashMap<String, String> hmRoles = new HashMap<String, String>();
+        //hmRoles.put("Admin","Desc: CRUD ops");
+       // hmRoles.put("Manager","Desc: Management of Teams");
+        //hmRoles.put("HR","Desc: HR Ops");
+        //Employee<HashMap<String,String>> employeeWithMultipleRoleHashMap = new Employee<HashMap<String,String>>(3,"SunShun",25,hmRoles);
+        //employeeWithMultipleRoleHashMap.printEmployeeDetails();
+
+        //4. Use Linked List
+        LinkedList<String> linkListRoles = new LinkedList<String>();
+        linkListRoles.add("Admin");
+        linkListRoles.add("Manager");
+        linkListRoles.add("HR");
+        Employee<LinkedList<String>> employeeWithMultipleRoleLinkList = new Employee<LinkedList<String>>(2,"Timothy",29,linkListRoles);
+        employeeWithMultipleRoleLinkList.printEmployeeDetails();
     }
 }
 

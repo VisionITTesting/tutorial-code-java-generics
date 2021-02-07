@@ -1,3 +1,6 @@
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 /*
 1. Created a Class with "Paramatarized" Type
@@ -7,7 +10,7 @@
 5. So that when user of this class creates the object, he can decide whether he want to send a String as role or Arrays of multiple role.
 6. Check the TestGenericsMainClass on how to create the Object for this.
 */
-public class Employee<T> {
+public class Employee<T extends List> {
 
     int id;
     String name;

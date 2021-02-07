@@ -22,6 +22,7 @@ java generics example
 * Sending the Role as ArrayList and HashMap and in both the cases Class is accepting it.
 * Only thing is that while creating the Employee Object you have to define the value of type "T".
 
+* Employee Class with T as generic Type
 ```java
 
 /*
@@ -53,6 +54,8 @@ public class Employee<T> {
 }
 
 ```
+
+* Init Generic Class Example Code:
 
 ```java
 import java.util.ArrayList;
@@ -99,3 +102,20 @@ id: 3 name: SunShun age: 25 Roles: {HR=Desc: HR Ops, Admin=Desc: CRUD ops, Manag
  */
 
 ```
+
+### How to Limit the Type of Values which can be passed to the class
+
+* There can be cases where you wish to send parameter to the Employee Class but you want to limit to the specific type only.
+* For example, I want to user to send only "List" type of Data structure and not String, or Hash Map.
+* To do this, I will have to make use of "extends" keyword. This will restrict the user of this class from passing anything other than List type.
+
+* See the use of extends Key word in the Generic bracket at line 11:
+
+> ![Image](2.png)
+
+* Check there is a compile time error thrown at line 17 and 33 when we are trying to pass HashMap or String.
+* Since, we have written in the Employee Class that we will only accept anything which belongs to Interface List.
+* This qualifies, ArrayList and LinkedList and in both the cases there is no error as depicted in the below screen shot. Check line: 25 and 41.
+
+
+> ![Image](3.png)
