@@ -1,6 +1,9 @@
+package main.example;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /*
 1. Created a Class with "Paramatarized" Type
@@ -8,7 +11,7 @@ import java.util.List;
 3. Role property could be simple string like "admin", or it could be an array of roles. example: [manager, admin]
 4. Since we do not know so we decided to keep it "generic"
 5. So that when user of this class creates the object, he can decide whether he want to send a String as role or Arrays of multiple role.
-6. Check the TestGenericsMainClass on how to create the Object for this.
+6. Check the main.example.TestGenericsMainClass on how to create the Object for this.
 */
 public class Employee<T extends List> {
 

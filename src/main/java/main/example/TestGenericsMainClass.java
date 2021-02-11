@@ -1,21 +1,22 @@
+package main.example;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 
 /*
-This is how you made Employee class more flexible to take different types of data types.
+This is how you made main.example.Employee class more flexible to take different types of data types.
 Notice, we have three examples below:
 1. Sending the Role as String, and the class is accepting it.
 2. Sending the Role as ArrayList and HashMap and in both the cases Class is accepting it.
-3. Only thing is that while creating the Employee Object you have to define the value of type "T".
+3. Only thing is that while creating the main.example.Employee Object you have to define the value of type "T".
  */
 public class TestGenericsMainClass {
 
     public static void main(String[] args){
 
         //*******BELOW NOT ALLOWED BECAUSE WE HAVE CHANGED THE TYPE TO LIST ONLY IN EMPLOYEE CLASS
-        //1. Create Employee object with only single role
-        //Employee<String> empWithSingleRole = new Employee<String>(1,"Akash",36,"Admin");
+        //1. Create main.example.Employee object with only single role
+        //main.example.Employee<String> empWithSingleRole = new main.example.Employee<String>(1,"Akash",36,"Admin");
         //empWithSingleRole.printEmployeeDetails();
 
         //2. Create a employee with multiple roles stored in array
@@ -32,7 +33,7 @@ public class TestGenericsMainClass {
         //hmRoles.put("Admin","Desc: CRUD ops");
        // hmRoles.put("Manager","Desc: Management of Teams");
         //hmRoles.put("HR","Desc: HR Ops");
-        //Employee<HashMap<String,String>> employeeWithMultipleRoleHashMap = new Employee<HashMap<String,String>>(3,"SunShun",25,hmRoles);
+        //main.example.Employee<HashMap<String,String>> employeeWithMultipleRoleHashMap = new main.example.Employee<HashMap<String,String>>(3,"SunShun",25,hmRoles);
         //employeeWithMultipleRoleHashMap.printEmployeeDetails();
 
         //4. Use Linked List
